@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import LandingPage from "./page/LandingPage";
+import CocktailPage from "./page/CocktailPage";
 
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/cocktail/:id" element={<CocktailPage />} />
       </Routes>
     </BrowserRouter>
   );
