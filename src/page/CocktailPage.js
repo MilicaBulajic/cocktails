@@ -17,10 +17,32 @@ export default function CocktailPage() {
         if (data.drinks) {
           const {
             strDrink: name,
+            strCategory: category,
+            strDrinkThumb: image,
+            strGlass: glass,
+            strInstructions: instructions,
+            strAlcoholic: info,
+            strIngredient1,
+            strIngredient2,
+            strIngredient3,
+            strIngredient4,
+            strIngredient5,
           } = data.drinks[0];
-
+          const ingredients = [
+            strIngredient1,
+            strIngredient2,
+            strIngredient3,
+            strIngredient4,
+            strIngredient5,
+          ];
           const newCocktail = {
-            name
+            name,
+            category,
+            image,
+            info,
+            glass,
+            instructions,
+            ingredients,
           };
           setCocktail(newCocktail);
         } else {
@@ -40,12 +62,37 @@ export default function CocktailPage() {
     return <p>no cocktail to display</p>;
   } else {
     const {
-      name
+      name,
+      image,
+      category,
+      info,
+      glass,
+      instructions,
+      ingredients,
     } = cocktail;
     return (
-      <div>
-        <h3>{name}</h3>
-      </div>
+      <section>
+        <Link to="/">
+          back home
+        </Link>
+        <h2>{name}</h2>
+        <div>
+          <img src={image} alt={name} />
+          <div className="drink-info">
+            <p>name : {name}</p>
+            <p>category : {category}</p>
+            <p>info : {info}</p>
+            <p>glass : {glass}</p>
+            <p>instructions: {instructions}</p>
+            <p>
+              ingredients :{" "}
+              {ingredients.map((item, index) => {
+                return item ? <span key={index}>{item}</span> : null;
+              })}
+            </p>
+          </div>
+        </div>
+      </section>
     );
   }
 }
