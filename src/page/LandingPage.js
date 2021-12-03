@@ -1,5 +1,6 @@
 import React from 'react';
 import List from '../components/List';
+import SearchBox from '../components/SearchBox';
 
 const LandingPage = () => {
     const [cocktails, setCocktails] = React.useState([]);
@@ -46,6 +47,7 @@ React.useEffect(() => {
             }, [searchTerm]);
             return (
               <main>
+                <SearchBox setSearchTerm={setSearchTerm} />
                 <List loading={loading} cocktails={cocktails} />
               </main>
             );
