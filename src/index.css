@@ -1,17 +1,68 @@
 .logo {
-    text-align: center;
+  display: block;
 }
- 
-.box {
-    text-align: center;
+.logo h1 {
+  font-family: "Dancing Script", cursive;
+  color: #163832;
+  float: left;
+  margin-left: 100px;
+  margin-top: 30px;
+  text-shadow: 1px 1px 2px gray;
 }
 
-.form  {
-    width: 350px;
-    margin: auto;
-    text-align: center;
-    border: 2px solid gray;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
+.box {
+  text-align: center;
+}
+
+input#name {
+  border-bottom: 2px solid #163832;
+
+}
+
+.form {
+  width: 55%;
+  margin: auto;
+float: right;
+margin-right: 96px;
+
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.cocktails {
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 1.8rem;
+  row-gap: 1.8rem;
+}
+
+.cocktail {
+  background: #e4e4dc;
+  margin-bottom: 2rem;
+  box-shadow: gray;
+  transition: var(--mainTransition);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: var(--mainBorderRadius);
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.cocktail {
+  border-radius: 8px;
+}
+
+.details h4 {
+  color: #163832;
+  padding-left: 15px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: "Dancing Script", cursive;
 }

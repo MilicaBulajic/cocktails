@@ -17,11 +17,11 @@ export default function SearchBox({ setSearchTerm }) {
     <section className="box">
       <form onSubmit={handleSubmit} className="search">
        <div className="form">
-          <p>find your best cocktail</p>
           <input
             type="text"
             name="name"
             id="name"
+            placeholder="Find your best cocktail recipe"
             onChange={searchcocktail}
             ref={searchValue}
           />

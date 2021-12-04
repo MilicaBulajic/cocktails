@@ -14,10 +14,10 @@ const List = ({ cocktails, loading }) => {
         );
     }
     return (
-        <div>
+        <div className="cocktails">
             {cocktails.map((item) => {
                 return <Cocktail key={item.id} {...item} />
-            })}z
+            })}
         </div>
     );
 };
