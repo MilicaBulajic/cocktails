@@ -22,31 +22,29 @@ input#name {
 .form {
   width: 55%;
   margin: auto;
-float: right;
-margin-right: 96px;
+  float: right;
+  margin-right: 96px;
 
   border-radius: 5px;
   margin-top: 40px;
 }
 
 .cocktails {
-  width: 85vw;
+  width: 1088px;
   margin: 0 auto;
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  column-gap: 1.8rem;
-  row-gap: 1.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  column-gap: 28px;
+  row-gap: 28px;
 }
 
 .cocktail {
   background: #e4e4dc;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   box-shadow: gray;
-  transition: var(--mainTransition);
   display: grid;
-  grid-template-rows: auto 1fr;
-  border-radius: var(--mainBorderRadius);
+  grid-template-rows: auto 35px;
 }
 
 img {
@@ -65,4 +63,94 @@ img {
   font-size: 22px;
   font-weight: 900;
   font-family: "Dancing Script", cursive;
+}
+
+.details h5 {
+  color: #a9a9a9;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.details h6 {
+  color: #7F7F7F;
+  padding-left: 15px;
+  margin-bottom: 15px;;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #B8ABC2;
+  color: #505050;
+  margin-left: 15px;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.single {
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  border-radius: 5px;
+  width: 1088px;
+  margin: 0 auto;
+  text-align: left;
+}
+.single img {
+  border-radius: 5px;
+}
+
+.drink {
+  padding: 30px;
+}
+
+.drink p span {
+  font-weight: bold;
+  color: #163832;
+}
+
+.buttons {
+  background-color: #B8ABC2;
+  color: #505050;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.single {
+
+}
+
+@media screen and (max-width: 600px) {
+  .cocktails {
+    grid-template-columns: none;
+  }
+  .logo h1 {
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+    float: none;
+  }
+  .form {
+    float: none;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0px;
+  }
+  .single {
+      display: block;
+      width: auto;
+  }
+  .single img {
+    margin: auto;
+    text-align: center;
+    width: 280px;
+    margin-top: 30px;
+  }
+  .drink {
+    max-width: 100%;
+    width: 320px;
+    margin-left: 10px;
+  }
 }

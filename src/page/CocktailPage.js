@@ -72,24 +72,23 @@ export default function CocktailPage() {
     } = cocktail;
     return (
       <section>
-        <Link to="/">
-          back home
-        </Link>
-        <h2>{name}</h2>
-        <div>
+        <div className="single">
           <img src={image} alt={name} />
-          <div className="drink-info">
-            <p>name : {name}</p>
-            <p>category : {category}</p>
-            <p>info : {info}</p>
-            <p>glass : {glass}</p>
-            <p>instructions: {instructions}</p>
+          <div className="drink">
+            <p>Name: <span>{name}</span></p>
+            <p>Category: <span>{category}</span></p>
+            <p>Type: <span>{info}</span></p>
+            <p>Glass: <span>{glass}</span></p>
+            <p>Instructions: <span>{instructions}</span></p>
             <p>
-              ingredients :{" "}
+              Ingredients:{" "}
               {ingredients.map((item, index) => {
                 return item ? <span key={index}>{item}</span> : null;
               })}
             </p>
+            <Link to="/" className="buttons">
+          Back 
+        </Link>
           </div>
         </div>
       </section>
